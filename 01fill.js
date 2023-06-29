@@ -13,6 +13,9 @@ function addData() {
     state: state
   };
 
+  // Display the user data in the console
+  console.log('User Data:', userData);
+
   // Make a POST request to the API endpoint
   fetch('https://api.example.com/saveUserData', {
     method: 'POST',
@@ -33,22 +36,3 @@ function addData() {
       console.log('Error:', error);
     });
 }
-// Make a GET request to fetch the user data from the API
-fetch('https://api.example.com/userData')
-  .then(response => response.json())
-  .then(data => {
-    // Process the retrieved data
-    var firstName = data.firstName;
-    var lastName = data.lastName;
-    var city = data.city;
-    var state = data.state;
-
-    // Use the retrieved data as needed
-    console.log(firstName, lastName, city, state);
-  })
-  .catch(error => {
-    // Handle any errors
-    console.log('Error:', error);
-  });
-
-      
